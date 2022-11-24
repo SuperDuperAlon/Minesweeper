@@ -8,23 +8,23 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body onload="initGame()">
-
+    <div class="modal">
+        <h1></h1>
+        <button onclick="playAgain()">Play Again</button>
+    </div>
     <div class="game">
       <div class="timer"><span>0</span></div>
-      <div class="smiley"><button>😀</button></div>
+      <div class="smiley"><button onclick="playAgain()">😀</button></div>
       <div class="levels">
         <div class="level-one"><button onclick="changeLevel(4,2)">Easy</button></div>
         <div class="level-two"><button onclick="changeLevel(8,14)">Medium</button></div>
         <div class="level-three"><button onclick="changeLevel(12,32)">Hard</button></div>
       </div>
       <table>
-        <tbody class="board" onmousedown="gameStart()"></tbody>
+        <tbody class="board"></tbody>
       </table>
     </div>
-    <div class="modal">
-        <h1></h1>
-        <button onclick="playAgain()">Play Again</button>
-    </div>
+
     <script src="app.js"></script>
   </body>
 </html>

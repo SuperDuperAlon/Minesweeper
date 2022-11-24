@@ -25,13 +25,13 @@
 }
 
 .hidden {
-    opacity: 0%
+    background-color: gray;
+    color: grey;
 }
 
 .shown {
     background-color: bisque;
     color: black;
-    opacity: 100%
 }
 
 .board td{
@@ -57,5 +57,5 @@
 .modal {
     background-color: aquamarine;
     display: none;
-    position: absolute;
+    position: fixed;
 }
