@@ -11,6 +11,12 @@
 
     <div class="game">
       <div class="timer"><span>0</span></div>
+      <div class="smiley"><button>😀</button></div>
+      <div class="levels">
+        <div class="level-one"><button onclick="changeLevel(4,2)">Easy</button></div>
+        <div class="level-two"><button onclick="changeLevel(8,14)">Medium</button></div>
+        <div class="level-three"><button onclick="changeLevel(12,32)">Hard</button></div>
+      </div>
       <table>
         <tbody class="board" onmousedown="gameStart()"></tbody>
       </table>
