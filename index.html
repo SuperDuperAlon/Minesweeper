@@ -8,11 +8,16 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body onload="initGame()">
+
     <div class="game">
-      <div class="timer"><span>00</span></div>
+      <div class="timer"><span>0</span></div>
       <table>
         <tbody class="board" onmousedown="gameStart()"></tbody>
       </table>
+    </div>
+    <div class="modal">
+        <h1></h1>
+        <button onclick="playAgain()">Play Again</button>
     </div>
     <script src="app.js"></script>
   </body>

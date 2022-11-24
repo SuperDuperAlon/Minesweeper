@@ -3,6 +3,7 @@
 }
 
 .game {
+
     width: 300px;
     height: 300px;
     text-align: center;
@@ -21,17 +22,30 @@ table {
 }
 
 .board {
-
+    background-color: bisque;
+    color: black;
     padding: 25px;
-    background-color: bisque
+
 }
 
 .hidden {
     background-color: chocolate;
+    color: chocolate;
+}
+
+.shown {
+    background-color: bisque;
+    color: black
 }
 
 .board td{
     width: 25%;
     height: 25%;
     opacity: 0%;
+}
+
+.modal {
+    background-color: aquamarine;
+    display: none;
+    position: absolute;
 }
