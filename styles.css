@@ -1,61 +1,220 @@
-.body {
-    box-sizing: content-box;
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap');
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-image: url('assets/BG-img.jpg');
 }
 
-.game {
-/* 
-    width: 300px;
-    height: 300px; */
+
+.modal {
+    z-index: 1;
+    background-color: #FFE15D; 
+    display: none;
+    position: absolute;
+    width: 500px;
+    height: 180px;
+    border-radius: 25px;
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Bowlby One SC', cursive;
+    border: #B01E68 5px;
+    border-style: groove;
+
+}
+
+.modal h1 {
+    letter-spacing: 2px;
+    padding-top: 8px;
+    font-size: 36px;
+    color: black;
+}
+
+.modal button {
+    display: inline-block;
+    align-items: center;
+    width: auto;
+    margin: auto;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #B01E68;
+    color: white;
+    padding: 12px;
+border-radius: 45px;
+
+}
+
+.modal button:hover {
+    background-color: #DC3535
+}
+.container {
+    background-color: #F1DDBF;
+    text-align: center;
+    display: inline-block;
+    align-items: center;
+    margin: auto;
+    padding: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Press Start 2P', cursive;
+    border: #525E75 2px solid;
+}
+
+header {
+    font-size: 25px;
+    margin: 20px
 }
 
 .timer {
-    height: 50px;
-    background-color: rgb(0, 173, 171);
+    color: white;
+    display: inline-block;
+    padding: 10px;
+    width: 20px
 }
 
+.timer span {
+    font-size: 14px;
+    color: #B01E68;
+}
 
 .board {
-    background-color: bisque;
+    background-color: lightgray;
     color: black;
     padding: 25px;
+}
 
+table {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .hidden {
     background-color: gray;
     color: grey;
+    border: 1px black;
 }
 
 .shown {
-    background-color: bisque;
-    color: black;
+    background-color: lightgray;
+    border: 1px black;
 }
 
-.board td{
-    width: 25px;
+ .board td {
+    font-size: 12px;
+    width: 20px;
     padding: 10px;
-    height: 25px;
+    height: 20px;
+    border: 3px black solid;  
+}
+
+.board td:hover {
+    background-color: #78938A;
+}
+
+.topbar {
+    display: block;
+    font-size: 30px;
 }
 
 .levels {
-    background-color: pink;
+    display: block;
 }
 
 .levels button{
-    background-color: white;
+    background-color: #78938A;
+    border: white 2px;
+    border-radius: 45px;
+    padding: 10px;
+    margin-bottom: 15px;
+    color: white;
 }
 
 .level-one, .level-two, .level-three {
-    background-color:aliceblue;
     display: inline-block;
-    margin: 20px
+    margin: 10px
 }
 
-.modal {
-    background-color: aquamarine;
-    display: none;
+.level-one button:hover, .level-two button:hover, .level-three button:hover {
+    cursor: pointer;
+    background-color: #92BA92
+}
+
+.smiley {
+    display: inline-block;
+text-align: center;
+
+}
+
+.smiley button {
+    border-radius: 180px;
+    font-size: 25px;
+    padding: 10px;
+}
+
+.smiley button:hover{ 
+opacity: 50%;
+    cursor:pointer
+}
+
+.lives {
+    display: inline-block;
+}
+
+.lives span {
+
+    font-size: 20px;
+    color: red;
+    margin: 4px;
+}
+
+footer {
     position: fixed;
+    left: 3%;
+    bottom: 5%;
+    font-size: 35px;
+    font-family: 'Assistant', sans-serif;
+    color: white;
+}
+
+.one {
+    color: blue
+}
+
+.two {
+    color: green;
+}
+
+.three {
+    color: red;
+}
+
+.four {
+    color: purple;
+}
+
+.five {
+    color: maroon;
+}
+
+.six {
+    color: turquoise;
+}
+
+.seven {
+    color: black;
+}
+
+.eight {
+    color: grey;
 }

@@ -4,26 +4,38 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Minesweeper</title>
+    <title>Be Mine</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body onload="initGame()">
     <div class="modal">
-        <h1></h1>
-        <button onclick="playAgain()">Play Again</button>
+      <h1></h1>
+      <button onclick="playAgain()">Play Again</button>
     </div>
-    <div class="game">
-      <div class="timer"><span>0</span></div>
-      <div class="smiley"><button onclick="playAgain()">😀</button></div>
+
+    <div class="container">
+      <header>Minesweeper</header>
+      <div class="smiley"><button onclick="playAgain()">😄</button></div>
+      <div class="topbar">
+        <div class="lives"><span class="heartOne">❤</span><span class="heartTwo">❤</span><span class="heartThree">❤</span></div>
+        <div class="timer"><span>0</span></div>
+      </div>
       <div class="levels">
-        <div class="level-one"><button onclick="changeLevel(4,2)">Easy</button></div>
-        <div class="level-two"><button onclick="changeLevel(8,14)">Medium</button></div>
-        <div class="level-three"><button onclick="changeLevel(12,32)">Hard</button></div>
+        <div class="level-one">
+          <button onclick="changeLevel(4,2)">Easy</button>
+        </div>
+        <div class="level-two">
+          <button onclick="changeLevel(8,14)">Medium</button>
+        </div>
+        <div class="level-three">
+          <button onclick="changeLevel(12,32)">Hard</button>
+        </div>
       </div>
       <table>
-        <tbody class="board"></tbody>
+        <tbody class="board" onmousedown="startGame()"></tbody>
       </table>
     </div>
+    <footer>Alon Mlievski</footer>
 
     <script src="app.js"></script>
   </body>
