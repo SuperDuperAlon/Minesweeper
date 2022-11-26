@@ -104,8 +104,9 @@ function getCellLocation(ev) {
   getRandomMineLocation(rowIdx, colIdx);
   setMinesNegsCount(gBoard);
   verifyEmptyCells();
-  setColorToNums()
+  setColorToNums();
   cellClicked(elCell, rowIdx, colIdx);
+  countMarked();
 }
 
 function cellClicked(elCell, i, j) {
@@ -228,6 +229,7 @@ function cellMarked(ev) {
       elCell.innerText = "";
     }
   }
+
 }
 
 function checkGameOver(elCell, cell) {
@@ -261,7 +263,8 @@ function revealMines() {
 function checkGameWon() {
   if (
     gLevel.SIZE ** 2 - gGame.shownCount - gLevel.MINES === 0 ||
-    gLevel.SIZE ** 2 - gGame.shownCount === 0
+    gLevel.SIZE ** 2 - gGame.shownCount === 0 ||
+    gLevel.SIZE ** 2 - gGame.shownCount - gGame.markedCount === 0
   ) {
     openModal("You Won!");
     gGame.isOn = false;
@@ -417,6 +420,17 @@ function setColorToNums() {
         case 8:
           elCell.classList.add("eight");
           break;
+      }
+    }
+  }
+}
+
+function countMarked() {
+  var flaggedCells = 0;
+  for (var i = 0; i < gLevel.SIZE; i++) {
+    for (var j = 0; j < gLevel.SIZE; j++) {
+      if (gBoard[i][j].isMarked) {
+        flaggedCells++;
       }
     }
   }
